@@ -1,3 +1,30 @@
-h1 {
-    color: blue;
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+.center {
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+    margin: auto;
+    max-width: 700px;
+    min-height: 200px;
+    padding-top: 100px;
+}
+.right {
+    width: 40%;
+    min-width: 200px;
+    background-color: limegreen;
+    height: 200px;
+    padding: 0px;
+    display: inline-block;
+}
+.left {
+    width: 60%;
+    min-width: 300px;
+    float: left;
+    background-color: deepskyblue;
+    height: 200px;
+    padding: 0px;
+    display: inline-block;
 }
