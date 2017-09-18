@@ -1,10 +1,10 @@
 body {
     margin: 0;
     padding: 0px;
+    background-color: rgb(237, 240, 241);
 }
 
 .center {
-    background-color: lightgoldenrodyellow;
     width: 100%;
     margin: auto;
     max-width: 700px;
@@ -12,19 +12,56 @@ body {
     padding-top: 100px;
 }
 .right {
-    width: 40%;
+    width: 35%;
     min-width: 200px;
-    background-color: limegreen;
+    background-color: white;
     height: 200px;
     padding: 0px;
     display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 10px 0 lightsteelblue;
 }
 .left {
     width: 60%;
+    background-color: white;
     min-width: 300px;
     float: left;
-    background-color: deepskyblue;
     height: 200px;
     padding: 0px;
     display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 10px 0 lightsteelblue;
+}
+
+.row {
+    display: table;
+    width: 100%;
+}
+.content {
+    padding: 5px;
+    border-bottom: solid gainsboro 1px;
+}
+.field {
+    display: table-cell;
+    width: 73%;
+    height: 20px;
+    padding: 0%;
+    padding-left: 5px;
+    margin: 0px;
+    border: 1px solid lightgray;
+    border-radius: 5px 0 0 5px;
+    box-shadow: 0 2px 0 0 white;
+}
+.button {
+    width: 25%;
+    height: 20px;
+    margin: 0px;
+    padding: 0%;
+    border: 0px;
+    background-color: #2185D0;
+    color: #FFF;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 0 0 royalblue;
 }
