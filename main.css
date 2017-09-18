@@ -162,7 +162,7 @@ body {
 .delete:hover{
     background-color: #e84f5a;
 }
-.left-item{
+.left-item, .already-bought{
     display: inline-block;
     font-size: 12px;
     background-color: rgb(237, 240, 241);
@@ -170,13 +170,13 @@ body {
     margin: 2px;
     border-radius: 3px;
 }
-.left-quantity{
+.left-quantity, .bought-quantity{
     padding: 0 4px 0 4px;
     display: inline-block;
     color: white;
     background-color: orange;
     border-radius: 20px;
 }
-.already-bought .left-item{
+.already-bought, .bought-quantity{
     text-decoration-line: line-through;
 }
