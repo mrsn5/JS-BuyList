@@ -167,7 +167,16 @@ body {
     font-size: 12px;
     background-color: rgb(237, 240, 241);
     padding: 5px;
+    margin: 2px;
+    border-radius: 3px;
 }
 .left-quantity{
+    padding: 0 4px 0 4px;
     display: inline-block;
+    color: white;
+    background-color: orange;
+    border-radius: 20px;
+}
+.already-bought .left-item{
+    text-decoration-line: line-through;
 }
