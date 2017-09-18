@@ -162,3 +162,12 @@ body {
 .delete:hover{
     background-color: #e84f5a;
 }
+.left-item{
+    display: inline-block;
+    font-size: 12px;
+    background-color: rgb(237, 240, 241);
+    padding: 5px;
+}
+.left-quantity{
+    display: inline-block;
+}
