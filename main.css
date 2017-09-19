@@ -75,7 +75,7 @@ body {
     margin: 0px;
     flex: 1 0 auto;
 }
-.button {
+.add {
     border: 0px;
     background-color: #2396e6;
     color: #FFF;
@@ -88,6 +88,10 @@ body {
     height: 30px;
     margin: 0px;
     padding: 7px 0 7px 0;
+    outline: none;
+}
+.add:hover{
+    background-color: #218dd7;
 }
 .name-part, .quantity-part, .delete-part{
     display: inline-block;
