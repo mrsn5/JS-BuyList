@@ -20,33 +20,45 @@ body {
     max-width: 700px;
     min-height: 200px;
     padding-top: 100px;
+
 }
-.right {
-    background-color: white;
-    box-shadow: 2px 2px 10px 0 lightsteelblue;
-    border-radius: 5px 5px 5px 5px;
 
-    width: 37%;
-    min-width: 200px;
+.right{
+    width: 35%;
     vertical-align: top;
-
-    margin: 5px;
-    padding: 0px;
     display: inline-block;
 }
-.left {
-    background-color: white;
-    box-shadow: 2px 2px 10px 0 lightsteelblue;
-    border-radius: 5px 5px 5px 5px;
-    width: 60%;
-
-    min-width: 320px;
+.left{
+    width: 65%;
     vertical-align: top;
-
-    margin: 5px;
-    padding: 0px;
     display: inline-block;
     float: left;
+}
+.right-container {
+    background-color: white;
+    box-shadow: 2px 2px 10px 0 lightsteelblue;
+    border-radius: 5px 5px 5px 5px;
+
+
+
+    margin: 5px;
+    padding: 0px;
+}
+.left-container {
+    background-color: white;
+    box-shadow: 2px 2px 10px 0 lightsteelblue;
+    border-radius: 5px 5px 5px 5px;
+
+
+    margin: 5px;
+    padding: 0px;
+}
+
+@media (max-width: 500px) {
+    .right, .left {
+        width: 100%;
+        min-width: 340px;
+    }
 }
 .content {
     padding: 10px;
@@ -101,6 +113,7 @@ body {
 .name-part{
     flex: 0 1 auto;
     width: 30%;
+    min-width: 100px;
     font-size: 14px;
     text-align: left;
     padding-left: 5px;
@@ -183,4 +196,40 @@ body {
 }
 .already-bought, .bought-quantity{
     text-decoration-line: line-through;
+}
+
+.badge{
+    position: fixed;
+    left: 15px;
+    bottom: -55px;
+    border-radius: 6px 6px 0 0;
+    color: white;
+    padding: 10px;
+    background-color: blueviolet;
+    transition: bottom 1s ease, background-color 1s ease;
+}
+
+.badge h3{
+    text-align: center;
+}
+
+.badge:hover{
+    bottom: 0px;
+    background-color: #3422e2;
+    transition: all 1s ease;
+}
+
+.create-by{
+    font-size: 12px;
+    text-align: left;
+}
+
+.h4{
+    text-align: center;
+}
+
+@media {
+    .buy-list-bage{
+        visibility: hidden;
+    }
 }
