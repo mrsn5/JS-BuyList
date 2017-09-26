@@ -228,8 +228,15 @@ body {
     text-align: center;
 }
 
-@media {
+@media print{
     .buy-list-bage{
         visibility: hidden;
+        height: 0px;
+    }
+    .badge{
+        bottom: 0px;
+        background-color: white;
+        color: blueviolet;
+        border: solid blueviolet 2px;
     }
 }
