@@ -244,7 +244,7 @@ body {
 .tooltip::before {
     font-size: 14px;
     font-weight: normal;
-    background-color: blueviolet;
+    background-color: #2396e6;
     border-radius: 10px;
     color: white;
     content: attr(data-tooltip);
@@ -263,7 +263,7 @@ body {
 
 }
 .tooltip:hover::before{
-    opacity: 1;
+    opacity: 0.9;
     visibility: visible;
     bottom: 110%;
     transition: all 1s ease 0.5s;
