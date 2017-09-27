@@ -244,7 +244,7 @@ body {
 .tooltip::before {
     font-size: 14px;
     font-weight: normal;
-    background-color: #2397e7;
+    background-color: #27a8ff;
     border-radius: 10px;
     color: white;
     content: attr(data-tooltip);
