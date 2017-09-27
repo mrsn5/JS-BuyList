@@ -203,8 +203,8 @@ body {
     left: 15px;
     bottom: -55px;
     border-radius: 6px 6px 0 0;
-    color: white;
     padding: 10px;
+    color: white;
     background-color: blueviolet;
     transition: bottom 1s ease, background-color 1s ease;
 }
@@ -224,10 +224,6 @@ body {
     text-align: left;
 }
 
-.h4{
-    text-align: center;
-}
-
 @media print{
     .buy-list-bage{
         visibility: hidden;
@@ -240,3 +236,36 @@ body {
         border: solid blueviolet 2px;
     }
 }
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip::before {
+    font-size: 14px;
+    font-weight: normal;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+    content: attr(data-tooltip);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    padding: 3px 5px 3px 5px;
+
+
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    margin-left: -50px;
+    width: 90px;
+
+
+}
+.tooltip:hover::before{
+    opacity: 1;
+    visibility: visible;
+    bottom: 110%;
+    transition: all 1s ease 0.5s;
+}
+
