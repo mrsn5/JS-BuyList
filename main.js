@@ -33,6 +33,7 @@ $(function () {
             $counter.val(quantity);
             if (quantity === 999)
                 $node.find(".plus").addClass("dissable");
+            $icon.find(".left-quantity").text(quantity);
         });
 
         $node.find(".minus").click(function () {
@@ -43,6 +44,7 @@ $(function () {
             $counter.val(quantity);
             if (quantity === 1)
                 $node.find(".minus").addClass("dissable");
+            $icon.find(".left-quantity").text(quantity);
         });
 
         $counter.change(function () {
@@ -62,12 +64,16 @@ $(function () {
                     $node.find(".plus").addClass("dissable");
                     quantity = 999;
                     $counter.val(999);
+                    $icon.find(".left-quantity").text(quantity);
                 } else if (input === 1) {
                     $node.find(".minus").addClass("dissable");
                     $counter.val(input);
+                    $icon.find(".left-quantity").text(quantity);
                 }
-                else
-                    $counter.val(input);
+                else {
+                    $counter.val(quantity);
+                    $icon.find(".left-quantity").text(quantity);
+                }
 
             }
             else
