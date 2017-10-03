@@ -138,7 +138,7 @@ body {
     border: 0px;
     border-radius: 3px;
 }
-.minus, .plus, .bought, .delete{
+.minus, .plus, .bought, .delete, .unbought{
     outline: none;
     height: 21px;
     border: 0px;
@@ -173,17 +173,20 @@ body {
 .delete-part{
     text-align: right;
 }
-.delete, .bought{
+.delete, .bought, .unbought{
     border-radius: 3px;
 }
-.bought{
+.bought, .unbought{
     background-color: rgb(228, 231, 232);
     color: #858585;
     box-shadow: 0px 2px 0 0 #b4b7b8;
     padding: 0 10px 0 10px;
 }
-.bought:hover{
+.bought:hover, .unbought:hover{
     background-color: rgb(199, 202, 203);
+}
+.unbought {
+    width: 90px;
 }
 .delete{
     background-color: #ff5663;
@@ -281,5 +284,12 @@ body {
     visibility: visible;
     bottom: 110%;
     transition: all 1s ease 0.5s;
+}
+
+.button-hide{
+    visibility: hidden;
+}
+.button-none{
+    display: none;
 }
 

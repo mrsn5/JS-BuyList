@@ -12,7 +12,7 @@ $(function () {
         $node.find(".name-part").text(title);
         $list.append($node);
 
-        /* QUANTITY EVENTS*/
+        /* QUANTITY EVENTS */
         var quantity = 1;
         var $counter = $node.find(".counter");
 
@@ -52,7 +52,7 @@ $(function () {
                 if (input >= 999) {
                     $node.find(".plus").addClass("dissable");
                     quantity = 999;
-                    $counter.val(input);
+                    $counter.val(999);
                 } else if (input === 1) {
                     $node.find(".minus").addClass("dissable");
                     $counter.val(input);
@@ -69,12 +69,38 @@ $(function () {
         $node.find(".delete").click(function () {
             $node.remove();
         });
+
+        /* BOUGHT ACTION */
+        $node.find(".bought").click(function () {
+            $node.fadeOut(250, function () {
+                $node.find(".plus").addClass("button-hide");
+                $node.find(".minus").addClass("button-hide");
+                $node.find(".bought").addClass("button-none");
+                $node.find(".delete").addClass("button-none");
+                $node.find(".unbought").removeClass("button-none");
+                $node.fadeIn(250);
+            })
+        });
+
+        /* UNBOUGHT ACTION */
+        $node.find(".unbought").click(function () {
+            $node.fadeOut(250, function () {
+                $node.find(".plus").removeClass("button-hide");
+                $node.find(".minus").removeClass("button-hide");
+                $node.find(".bought").removeClass("button-none");
+                $node.find(".delete").removeClass("button-none");
+                $node.find(".unbought").addClass("button-none");
+                $node.fadeIn(250);
+            })
+        });
     }
 
     function addButtFunc() {
         var $field = $(".field");
-        if ($field.val().trim())
-            addItem($field.val().trim());
+        var product = $field.val().trim();
+
+        if (product)
+            addItem(product);
         $field.val("");
     }
 
@@ -89,6 +115,8 @@ $(function () {
     $(document).keypress(function(e) {
         if(e.which === 13) addButtFunc();
     });
+
+
 
     /* EXAMPLES */
     addItem("iPhone X");
