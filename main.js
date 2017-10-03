@@ -72,25 +72,25 @@ $(function () {
 
         /* BOUGHT ACTION */
         $node.find(".bought").click(function () {
-            $node.fadeOut(250, function () {
+            $node.find(".row").fadeOut(250, function () {
                 $node.find(".plus").addClass("button-hide");
                 $node.find(".minus").addClass("button-hide");
                 $node.find(".bought").addClass("button-none");
                 $node.find(".delete").addClass("button-none");
                 $node.find(".unbought").removeClass("button-none");
-                $node.fadeIn(250);
+                $node.find(".row").fadeIn(250);
             })
         });
 
         /* UNBOUGHT ACTION */
         $node.find(".unbought").click(function () {
-            $node.fadeOut(250, function () {
+            $node.find(".row").fadeOut(250, function () {
                 $node.find(".plus").removeClass("button-hide");
                 $node.find(".minus").removeClass("button-hide");
                 $node.find(".bought").removeClass("button-none");
                 $node.find(".delete").removeClass("button-none");
                 $node.find(".unbought").addClass("button-none");
-                $node.fadeIn(250);
+                $node.find(".row").fadeIn(250);
             })
         });
     }
