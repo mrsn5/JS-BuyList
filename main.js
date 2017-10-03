@@ -10,6 +10,7 @@ $(function () {
 
     var ITEM_TEMPLATE = $(".item-template").html();
     var ICON_TEMPLATE_UPTO = $(".upto-buy-template").html();
+    var ICON_TEMPLATE_ALREADY = $(".already-bought-template").html();
 
     function addItem(title) {
         var $node = $(ITEM_TEMPLATE);
@@ -20,6 +21,11 @@ $(function () {
         $icon.find("span").text(title);
         $icon.find(".left-quantity").text(1);
         $listupto.append($icon);
+
+        var $iconalready = $(ICON_TEMPLATE_ALREADY);
+        $iconalready.find("span").text(title);
+        $iconalready.find(".bought-quantity").text(1);
+        $listalready.append($iconalready);
 
         /* QUANTITY EVENTS */
         var quantity = 1;
@@ -34,6 +40,7 @@ $(function () {
             if (quantity === 999)
                 $node.find(".plus").addClass("dissable");
             $icon.find(".left-quantity").text(quantity);
+            $iconalready.find(".bought-quantity").text(quantity);
         });
 
         $node.find(".minus").click(function () {
@@ -45,6 +52,7 @@ $(function () {
             if (quantity === 1)
                 $node.find(".minus").addClass("dissable");
             $icon.find(".left-quantity").text(quantity);
+            $iconalready.find(".bought-quantity").text(quantity);
         });
 
         $counter.change(function () {
@@ -65,14 +73,17 @@ $(function () {
                     quantity = 999;
                     $counter.val(999);
                     $icon.find(".left-quantity").text(quantity);
+                    $iconalready.find(".bought-quantity").text(quantity);
                 } else if (input === 1) {
                     $node.find(".minus").addClass("dissable");
                     $counter.val(input);
                     $icon.find(".left-quantity").text(quantity);
+                    $iconalready.find(".bought-quantity").text(quantity);
                 }
                 else {
                     $counter.val(quantity);
                     $icon.find(".left-quantity").text(quantity);
+                    $iconalready.find(".bought-quantity").text(quantity);
                 }
 
             }
@@ -88,11 +99,13 @@ $(function () {
         /* BOUGHT ACTION */
         $node.find(".bought").click(function () {
             $node.find(".row").fadeOut(250, function () {
-                $node.find(".plus").addClass("button-hide");
-                $node.find(".minus").addClass("button-hide");
-                $node.find(".bought").addClass("button-none");
-                $node.find(".delete").addClass("button-none");
-                $node.find(".unbought").removeClass("button-none");
+                $node.find(".plus").addClass("hide");
+                $node.find(".minus").addClass("hide");
+                $node.find(".bought").addClass("none");
+                $node.find(".delete").addClass("none");
+                $node.find(".unbought").removeClass("none");
+                $icon.addClass("none");
+                $iconalready.removeClass("none");
                 $node.find(".row").fadeIn(250);
             });
         });
@@ -100,11 +113,13 @@ $(function () {
         /* UNBOUGHT ACTION */
         $node.find(".unbought").click(function () {
             $node.find(".row").fadeOut(250, function () {
-                $node.find(".plus").removeClass("button-hide");
-                $node.find(".minus").removeClass("button-hide");
-                $node.find(".bought").removeClass("button-none");
-                $node.find(".delete").removeClass("button-none");
-                $node.find(".unbought").addClass("button-none");
+                $node.find(".plus").removeClass("hide");
+                $node.find(".minus").removeClass("hide");
+                $node.find(".bought").removeClass("none");
+                $node.find(".delete").removeClass("none");
+                $node.find(".unbought").addClass("none");
+                $icon.removeClass("none");
+                $iconalready.addClass("none");
                 $node.find(".row").fadeIn(250);
             });
         });

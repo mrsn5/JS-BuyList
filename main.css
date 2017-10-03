@@ -286,10 +286,10 @@ body {
     transition: all 1s ease 0.5s;
 }
 
-.button-hide{
+.hide{
     visibility: hidden;
 }
-.button-none{
+.none{
     display: none;
 }
 .already-bought-name{
