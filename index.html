@@ -11,91 +11,50 @@
 <div class="container">
     <div class="center">
         <div class="left">
-        <div class="left-container">
-            <div class="content">
+            <div class="left-container">
+                <div class="content">
                 <span class="row">
-                    <input class="field" placeholder="Назва товару">
+                    <input class="field" placeholder="Назва товару" autofocus>
                     <button class="add tooltip" data-tooltip="Натисныть, щоб додати товар">Додати</button>
                 </span>
+                </div>
             </div>
-            <div class="item">
-                <span class="row">
-                    <span class="name-part">iPhone X</span>
-                    <span class="quantity-part">
-                        <button class="minus tooltip" data-tooltip="Зменшити">&ndash;</button>
-                        <input class="counter" value="1">
-                        <button class="plus tooltip" data-tooltip="Збільшити">+</button>
-                    </span>
-                    <span class="delete-part">
-                        <button class="bought tooltip" data-tooltip="Відмітити як куплене">Куплено</button>
-                        <button class="delete tooltip" data-tooltip="Видалити зі списку">&times;</button>
-                    </span>
-                </span>
-            </div>
-            <div class="item">
-                <span class="row">
-                    <span class="name-part">Macbook Pro</span>
-                    <span class="quantity-part">
-                        <button class="minus tooltip" data-tooltip="Зменшити">&ndash;</button>
-                        <input class="counter" value="2">
-                        <button class="plus tooltip" data-tooltip="Збільшити">+</button>
-                    </span>
-                    <span class="delete-part">
-                        <button class="bought tooltip" data-tooltip="Відмітити як куплене">Куплено</button>
-                        <button class="delete tooltip" data-tooltip="Видалити зі списку">&times;</button>
-                    </span>
-                </span>
-            </div><div class="item">
-                <span class="row">
-                    <span class="name-part">Apple Watch 3</span>
-                    <span class="quantity-part">
-                        <button class="minus tooltip" data-tooltip="Зменшити">&ndash;</button>
-                        <input class="counter" value="1">
-                        <button class="plus tooltip" data-tooltip="Збільшити">+</button>
-                    </span>
-                    <span class="delete-part">
-                        <button class="bought tooltip" data-tooltip="Відмітити як куплене">Куплено</button>
-                        <button class="delete tooltip" data-tooltip="Видалити зі списку">&times;</button>
-                    </span>
-                </span>
-        </div>
-        </div>
 
 
         </div>
 
         <div class="right">
-        <div class="right-container">
-            <div class="content">
-                <h3>Залишилося</h3>
-            </div>
+            <div class="right-container">
+                <div class="content">
+                    <h3>Залишилося</h3>
+                </div>
 
-            <div class="item">
-                <div class="left-item">
-                    iPhone X
-                    <div class="left-quantity">1</div>
+                <div class="item">
+                    <div class="left-item">
+                        iPhone X
+                        <div class="left-quantity">1</div>
+                    </div>
+                    <div class="left-item">
+                        Macbook Pro
+                        <div class="left-quantity">1</div>
+                    </div>
+                    <div class="left-item">
+                        Apple Watch 3
+                        <div class="left-quantity">1</div>
+                    </div>
                 </div>
-                <div class="left-item">
-                    Macbook Pro
-                    <div class="left-quantity">1</div>
-                </div>
-                <div class="left-item">
-                    Apple Watch 3
-                    <div class="left-quantity">1</div>
-                </div>
-            </div>
 
-            <div class="content">
-                <h3>Куплено</h3>
-            </div>
+                <div class="content">
+                    <h3>Куплено</h3>
+                </div>
 
-            <div class="item">
-                <div class="already-bought">
-                    Apple Watch 3
-                    <div class="bought-quantity">1</div>
+                <div class="item">
+                    <div class="already-bought">
+                        Apple Watch 3
+                        <div class="bought-quantity">1</div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
 
     </div>
@@ -105,6 +64,28 @@
     <div class="create-by">Created by:</div>
     <div>San Nguyen</div>
 </div>
+
+
+<div class="item-template" style="display: none">
+    <div class="item">
+                <span class="row">
+                    <span class="name-part"></span>
+                    <span class="quantity-part">
+                        <button class="minus tooltip" data-tooltip="Зменшити">&ndash;</button>
+                        <input class="counter" value="1">
+                        <button class="plus tooltip" data-tooltip="Збільшити">+</button>
+                    </span>
+                    <span class="delete-part">
+                        <button class="bought tooltip" data-tooltip="Відмітити як куплене">Куплено</button>
+                        <button class="delete tooltip" data-tooltip="Видалити зі списку">&times;</button>
+                    </span>
+                </span>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>

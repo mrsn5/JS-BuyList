@@ -7,6 +7,10 @@ h3 {
 }
 button{
     cursor: pointer;
+    outline: none;
+}
+input{
+    outline: none;
 }
 body {
     margin: 0;
@@ -17,7 +21,7 @@ body {
 .center {
     width: 100%;
     margin: auto;
-    max-width: 700px;
+    max-width: 900px;
     min-height: 200px;
     padding-top: 100px;
 
@@ -70,6 +74,11 @@ body {
     border-bottom: solid gainsboro 1px;
     text-align: center;
 }
+
+.item-close{
+    height: 0;
+    transition: height 1s linear;
+}
 .row {
     display: inline-flex;
     width: 100%;
@@ -100,7 +109,6 @@ body {
     height: 30px;
     margin: 0px;
     padding: 7px 0 7px 0;
-    outline: none;
 }
 .add:hover{
     background-color: #218dd7;
@@ -206,7 +214,7 @@ body {
     padding: 10px;
     color: white;
     background-color: blueviolet;
-    transition: bottom 1s ease, background-color 1s ease;
+    transition: bottom 1s ease;
 }
 
 .badge h3{
@@ -216,7 +224,7 @@ body {
 .badge:hover{
     bottom: 0px;
     background-color: #3422e2;
-    transition: all 1s ease;
+    transition: bottom 1s ease, background-color 1s ease;
 }
 
 .create-by{
@@ -226,8 +234,7 @@ body {
 
 @media print{
     .buy-list-bage{
-        visibility: hidden;
-        height: 0px;
+        display: none;
     }
     .badge{
         bottom: 0px;
