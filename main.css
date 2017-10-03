@@ -292,4 +292,11 @@ body {
 .button-none{
     display: none;
 }
+.already-bought-name{
+    display: inline;
+}
+
+.item-template, .already-bought-template, .upto-buy-template{
+    display: none;
+}
 

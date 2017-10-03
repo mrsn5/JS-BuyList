@@ -29,31 +29,20 @@
                     <h3>Залишилося</h3>
                 </div>
 
-                <div class="item">
-                    <div class="left-item">
-                        iPhone X
-                        <div class="left-quantity">1</div>
-                    </div>
-                    <div class="left-item">
-                        Macbook Pro
-                        <div class="left-quantity">1</div>
-                    </div>
-                    <div class="left-item">
-                        Apple Watch 3
-                        <div class="left-quantity">1</div>
-                    </div>
+                <div class="item" id="up-to">
+
                 </div>
 
                 <div class="content">
                     <h3>Куплено</h3>
                 </div>
 
-                <div class="item">
+                <div class="item" id="already">
                     <div class="already-bought">
-                        Apple Watch 3
+                        <span>Apple Watch 3</span>
                         <div class="bought-quantity">1</div>
                     </div>
-                </div>
+                </span>
             </div>
         </div>
 
@@ -66,7 +55,7 @@
 </div>
 
 <!-- TEMPLATES -->
-<div class="item-template" style="display: none">
+<div class="item-template">
     <div class="item">
                 <span class="row">
                     <span class="name-part" contenteditable="true"></span>
@@ -78,9 +67,23 @@
                     <span class="delete-part">
                         <button class="bought tooltip" data-tooltip="Відмітити як куплене">Куплено</button>
                         <button class="delete tooltip" data-tooltip="Видалити зі списку">&times;</button>
-                        <button class="unbought tooltip button-none" data-tooltip="Відмінити покупку">Не куплено</button>
+                        <button class="unbought tooltip button-none"
+                                data-tooltip="Відмінити покупку">Не куплено</button>
                     </span>
                 </span>
+    </div>
+</div>
+<div class="upto-buy-template">
+    <div class="left-item">
+        <span></span>
+        <div class="left-quantity"></div>
+    </div>
+</div>
+
+<div class="already-bought-template">
+    <div class="already-bought">
+        <span></span>
+        <div class="bought-quantity"></div>
     </div>
 </div>
 

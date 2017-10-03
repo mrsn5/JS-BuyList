@@ -4,13 +4,22 @@
 
 
 $(function () {
-    var $list= $(".left-container");
+    var $list = $(".left-container");
+    var $listupto = $("#up-to");
+    var $listalready = $("#already");
+
     var ITEM_TEMPLATE = $(".item-template").html();
+    var ICON_TEMPLATE_UPTO = $(".upto-buy-template").html();
 
     function addItem(title) {
         var $node = $(ITEM_TEMPLATE);
         $node.find(".name-part").text(title);
         $list.append($node);
+
+        var $icon = $(ICON_TEMPLATE_UPTO);
+        $icon.find("span").text(title);
+        $icon.find(".left-quantity").text(1);
+        $listupto.append($icon);
 
         /* QUANTITY EVENTS */
         var quantity = 1;
@@ -79,7 +88,7 @@ $(function () {
                 $node.find(".delete").addClass("button-none");
                 $node.find(".unbought").removeClass("button-none");
                 $node.find(".row").fadeIn(250);
-            })
+            });
         });
 
         /* UNBOUGHT ACTION */
@@ -91,7 +100,7 @@ $(function () {
                 $node.find(".delete").removeClass("button-none");
                 $node.find(".unbought").addClass("button-none");
                 $node.find(".row").fadeIn(250);
-            })
+            });
         });
     }
 
