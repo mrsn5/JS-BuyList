@@ -125,6 +125,7 @@ body {
     font-size: 14px;
     text-align: left;
     padding-left: 5px;
+    padding-top: 4px;
 }
 .quantity-part{
 }
@@ -153,16 +154,22 @@ body {
     background-color: #ff5663;
     box-shadow: 1px 2px 0 0 #9f3c41;
 }
-.minus:hover{
+.minus:not(.dissable):hover{
     background-color: #e84f5a;
 }
 .plus{
     background-color: #39ff91;
     box-shadow: 1px 2px 0 0 #22ba74;
 }
-.plus:hover{
+.plus:not(.dissable):hover{
     background-color: #34e783;
 }
+
+.dissable{
+    opacity: 0.5;
+    cursor: default;
+}
+
 .delete-part{
     text-align: right;
 }
@@ -257,7 +264,7 @@ body {
     content: attr(data-tooltip);
     visibility: hidden;
     opacity: 0;
-    transition: all 0.5s ease;
+    /*transition: all 0.5s ease;*/
     padding: 3px 5px 3px 5px;
 
 
