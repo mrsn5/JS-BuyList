@@ -16,6 +16,10 @@ $(function () {
         var $node = $(ITEM_TEMPLATE);
         $node.find(".name-part").text(title);
         $list.append($node);
+        $node.hide();
+        $node.slideDown(function () {
+            $node.show();
+        });
 
         var $icon = $(ICON_TEMPLATE_UPTO);
         $icon.find("span").text(title);
