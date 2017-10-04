@@ -93,7 +93,11 @@ $(function () {
         
         /* DELETE ACTION */
         $node.find(".delete").click(function () {
-            $node.remove();
+            $icon.remove();
+            $iconalready.remove();
+            $node.slideUp(function () {
+                $node.remove();
+            });
         });
 
         /* BOUGHT ACTION */
