@@ -127,6 +127,12 @@ $(function () {
                 $node.find(".row").fadeIn(250);
             });
         });
+
+        /* TITLE CHANGE ACTION */
+        var editable = $node.find(".name-part");
+        editable.change(function () {
+            alert("!");
+        });
     }
 
     function addButtFunc() {
