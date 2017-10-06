@@ -143,10 +143,27 @@ $(function () {
             edible.focus();
             edible.val(edited.text());
         });
-        
-        /*edible.input(function () {
-            
-        });*/
+
+
+        edible.on("input", function () {
+            function setChanges() {
+                edited.removeClass("none");
+                edible.addClass("none");
+            }
+            edible.keypress(function(e) {
+                if(e.which === 13) {
+                    setChanges();
+                }
+            });
+            edible.blur(function () {
+                setChanges();
+            });
+
+            title = edible.val();
+            $node.find(".title").text(title);
+            $icon.find("span").text(title);
+            $iconalready.find("span").text(title);
+        });
     }
 
     function addButtFunc() {
