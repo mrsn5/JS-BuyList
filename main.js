@@ -14,7 +14,7 @@ $(function () {
 
     function addItem(title) {
         var $node = $(ITEM_TEMPLATE);
-        $node.find(".name-part").text(title);
+        $node.find(".title").text(title);
         $list.append($node);
         $node.hide();
         $node.slideDown(function () {
@@ -112,6 +112,7 @@ $(function () {
                 $node.find(".bought").addClass("none");
                 $node.find(".delete").addClass("none");
                 $node.find(".unbought").removeClass("none");
+                $node.find(".name-part").addClass('name-bought');
                 $icon.addClass("none");
                 $iconalready.removeClass("none");
                 $node.find(".row").fadeIn(250);
@@ -126,6 +127,7 @@ $(function () {
                 $node.find(".bought").removeClass("none");
                 $node.find(".delete").removeClass("none");
                 $node.find(".unbought").addClass("none");
+                $node.find(".name-part").removeClass('name-bought');
                 $icon.removeClass("none");
                 $iconalready.addClass("none");
                 $node.find(".row").fadeIn(250);
@@ -133,10 +135,18 @@ $(function () {
         });
 
         /* TITLE CHANGE ACTION */
-        var editable = $node.find(".name-part");
-        editable.change(function () {
-            alert("!");
+        var edible = $node.find(".edit");
+        var edited = $node.find(".title");
+        edited.click(function () {
+            edited.addClass("none");
+            edible.removeClass("none");
+            edible.focus();
+            edible.val(edited.text());
         });
+        
+        /*edible.input(function () {
+            
+        });*/
     }
 
     function addButtFunc() {

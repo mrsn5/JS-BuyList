@@ -31,6 +31,7 @@ body {
     width: 35%;
     vertical-align: top;
     display: inline-block;
+    padding-bottom: 50px;
 }
 .left{
     width: 65%;
@@ -70,6 +71,7 @@ body {
     text-align: center;
 }
 .item {
+    height: 22px;
     padding: 5px 10px 8px 10px;
     border-bottom: solid gainsboro 1px;
     text-align: center;
@@ -126,6 +128,11 @@ body {
     text-align: left;
     padding-left: 5px;
     padding-top: 4px;
+}
+.edit {
+    font-size: 14px;
+    margin-left: -3px;
+    margin-top: -3px;
 }
 .quantity-part{
 }
@@ -212,7 +219,7 @@ body {
     background-color: orange;
     border-radius: 20px;
 }
-.already-bought, .bought-quantity{
+.already-bought, .bought-quantity, .name-bought{
     text-decoration-line: line-through;
 }
 
