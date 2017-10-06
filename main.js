@@ -12,6 +12,7 @@ $(function () {
     var ICON_TEMPLATE_UPTO = $(".upto-buy-template").html();
     var ICON_TEMPLATE_ALREADY = $(".already-bought-template").html();
 
+
     function addItem(title) {
         var $node = $(ITEM_TEMPLATE);
         $node.find(".title").text(title);
@@ -94,7 +95,7 @@ $(function () {
             else
                 $counter.val(quantity);
         });
-        
+
         /* DELETE ACTION */
         $node.find(".delete").click(function () {
             $icon.remove();
@@ -105,7 +106,9 @@ $(function () {
         });
 
         /* BOUGHT ACTION */
+        var bought = false;
         $node.find(".bought").click(function () {
+            bought = true;
             $node.find(".row").fadeOut(250, function () {
                 $node.find(".plus").addClass("hide");
                 $node.find(".minus").addClass("hide");
@@ -121,6 +124,7 @@ $(function () {
 
         /* UNBOUGHT ACTION */
         $node.find(".unbought").click(function () {
+            bought = false;
             $node.find(".row").fadeOut(250, function () {
                 $node.find(".plus").removeClass("hide");
                 $node.find(".minus").removeClass("hide");
@@ -138,10 +142,12 @@ $(function () {
         var edible = $node.find(".edit");
         var edited = $node.find(".title");
         edited.click(function () {
-            edited.addClass("none");
-            edible.removeClass("none");
-            edible.focus();
-            edible.val(edited.text());
+            if (!bought) {
+                edited.addClass("none");
+                edible.removeClass("none");
+                edible.focus();
+                edible.val(edited.text());
+            }
         });
 
 
@@ -150,8 +156,9 @@ $(function () {
                 edited.removeClass("none");
                 edible.addClass("none");
             }
-            edible.keypress(function(e) {
-                if(e.which === 13) {
+
+            edible.keypress(function (e) {
+                if (e.which === 13) {
                     setChanges();
                 }
             });
@@ -176,17 +183,20 @@ $(function () {
     }
 
 
-
-
     /* EVENTS */
-    $(".add").click(function() {
+    $(".add").click(function () {
         addButtFunc();
     });
 
-    $(document).keypress(function(e) {
-        if(e.which === 13) addButtFunc();
+    $(".field").focus(function () {
+       $(this).keypress(function (e) {
+           if (e.which === 13) addButtFunc();
+       });
     });
 
+    $(".badge").hover(function () {
+        $(this).addClass("transition");
+    });
 
 
     /* EXAMPLES */

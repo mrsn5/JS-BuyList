@@ -24,7 +24,6 @@ body {
     max-width: 900px;
     min-height: 200px;
     padding-top: 100px;
-
 }
 
 .right{
@@ -38,6 +37,7 @@ body {
     vertical-align: top;
     display: inline-block;
     float: left;
+    padding-bottom: 38px;
 }
 .right-container {
     background-color: white;
@@ -63,6 +63,12 @@ body {
     .right, .left {
         width: 100%;
         min-width: 340px;
+    }
+    .left{
+        padding-bottom: 0;
+    }
+    .right {
+        padding-bottom: 38px;
     }
 }
 .content {
@@ -233,7 +239,6 @@ body {
     padding: 10px;
     color: white;
     background-color: blueviolet;
-    transition: bottom 1s ease;
 }
 
 .badge h3{
@@ -244,6 +249,10 @@ body {
     bottom: 0px;
     background-color: #3422e2;
     transition: bottom 1s ease, background-color 1s ease;
+}
+
+.transition{
+    transition: background-color 1s ease, bottom 1s ease;
 }
 
 .create-by{
